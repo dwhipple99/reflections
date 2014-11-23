@@ -2,3 +2,94 @@ What happens when you initialize a repository?  Why do you need to do it?
 
    -- It creates the hidden directory .git and associated metadata files.
    -- You need to tell Git this is a new repository
+   
+git diff    //  With no arguments, it compares the file in my working directory and              
+            //  the staging directory, not the Repository
+			
+			
+***********		***********		**********
+*         * 	*         *		*        *
+* Working * 	* Status  *		* Repos. *
+*         * 	*         *		*        *
+***********		***********		**********
+
+git diff --staged   //  Show the difference between the staging area and commit
+
+git reset --hard    // Gets rid of any changes in the working directory and the staging area
+                    // VERY CAREFUL, not undoable
+
+git checkout master
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+   -- By adding the group of files to the staging area with git add, then doing 
+   -- a git commit on the entire group.
+   
+BRANCHES
+-----------
+
+Just Labels for your commits
+
+-- Master is default Branch
+
+Current last commit is the "tip"
+
+Merging two branches is possible
+
+git branch easy-mode  // easy-mode is the new branch name
+git checkout easy-mode // Checkout the easy-mode branch
+
+What are some situations when branches would be helpful in keeping your history
+organized?  How would branches help?
+
+  -- I would use branches when I want to experiment with a feature
+  -- New features, or fixing bugs
+  -- Master - Production quality, never breaks
+  -- Working - Actively working
+  -- Experimental - Trying something out
+  
+  
+       *** Bug-Fix
+Master*  
+       *** New-Feature
+	   
+git log --graph --oneline master coins
+
+git checkout -b new_branch_name   // equivelent to git branch new_branch_name
+                                  // followed by   git checkout new_branch_name
+								  
+How do the diagrams help you visualize the branch structure?
+
+   -- Through a pictorial representation of the branches.
+   
+git merge master coins   // Merge master branch and coins branch
+git show                 // Shows the changes between a commit and its parent
+
+git branch -d coins      // Deletes only the label for the branch
+
+
+What is the result of merging two branches together?  Why do we represent it in
+the diagram the way we do?
+
+  -- The result is that the two commits and there history combine to create a new master
+  -- 
+
+git log -n 1  // Show the latest log
+
+What are the pros and cons of Git's automatic merging vs. always doing merging manually?
+
+  -- The pro is that it saves you allot of work
+  -- The con is that 
+  
+REMOTES     -- Remote Repositories (GitHub)
+-------
+git remote   // Show all remotes
+git remote add origin  git@github.com:dwhipple99/cs575project  // Standard if only one remote
+git remote -v   // Shows where you fetch from and push too
+
+git push origin master // Push the master branch to Github
+
+
+
+	   
+	   
