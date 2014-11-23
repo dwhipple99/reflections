@@ -1,0 +1,64 @@
+- Using diff or fc in windows for comparing two files
+- is a great way to identify potential bugs.
+
+- It may be that you created a typo that you weren't even 
+- aware of, and diff or fc would show it too you.
+
+How could having easy access to the entire history of a file make you
+a more efficient programmer in the long term?
+
+  - Obviously, knowing what changes you've made, allows you to roll
+  - back any significant bugs you've introduced.
+  
+  - Also, you could use version control to understand how and what has
+  - changed, especially if your working with other developers.
+  
+  - All of the following use version control - Wikepedia, Google DOC's, 
+  - Dropbox
+  
+What do you think are the pros and cons of manually choosing when to 
+create a commit, like you do in GIT, vs having versions automatically
+saved, like Google docs.
+
+   - If you choose, then you can select reasonable times, for example
+   - when it successfully compiles, or when the code is working
+   
+git log --stat /shows what files were changed in the commit, in the
+               /repository
+			   
+git diff commit_id1 commit_id2   / show the diffs in the commits
+
+Why do you think some version control systems, like Git, allow saving
+multiple files in one commit, while others like Google docs, treat
+each file seperately?
+
+   - because often a set of code changes that are logically related 
+   - are across multiple files.
+
+git --version  / tells you the version of Git
+git clone repository_name / Copy an entire repository
+
+git config --global color.ui auto
+
+git log / shows all the changes to the repository (all commits)
+
+How can you use the commands git log and git diff to view the history
+of files?
+
+   - git log shows you all commits
+   - git diff commit_id1 commit_id2 shows you the differences 
+   
+How might using version control make you more confident to make changes that could
+break something?
+
+   -- If using often commits, I know I can always backtrack
+   
+What do you want to use Git for?
+
+   -- Source code control..
+   
+git status   // list status of repository
+   
+   
+ 
+  
